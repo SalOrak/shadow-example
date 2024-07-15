@@ -1,0 +1,3 @@
+Name         | Filepath               | Destination                        | Operation
+Bash         | files/bashrc           | .bashrc-shadow                     | symfile
+Emacs        | files/emacs-shadow     | .config/emacs/shadow               | symdir
