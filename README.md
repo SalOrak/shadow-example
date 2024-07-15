@@ -1,6 +1,8 @@
-# dotfiles
+# Shadow Dotfiles
 
 Automatic installation of apps and configuration files onto the filesystem. It only works on POSIX (tested on macOS and Debian) systems.
+
+This repository serves as an example for a new proposed way to have a single point of Dotfiles plus many shadow dotfiles that complement it depending on the machine.
 
 ## Usage
 
@@ -32,10 +34,6 @@ Usage: configure.sh [INSTALL | UNINSTALL] [[-d PATH/TO/DOTIFILES]] [[-s PATH/PRE
 
 ```
 
-## Personal DOTS file
-This project also contains an example with my personal configuration files.
-And yes, I'm both a Neovim user and an Emacs user :)
-
 ## DOTS file
 
 The **DOTS** file is compose of rows (dot files) and properties.
@@ -44,11 +42,6 @@ Currently it supports the following columns:
 - **Filepath**: [Required] The location path of the DOT file to use as base. This path should point to a valid file or directory. By default it uses the current directory as a prefix. 
 - **Destination**: [Required] Location to place the symlink to take place for the app. Each application searches config files in different places. By default it uses the $HOME variable as prefix. 
 - **Operation**: [Required] Type of symbolic link. It can either be `symfile` for singular configuration files or `symdir` for complete (recursive) directories. Other operation skips the row.
-
-## TODO List
-
-- [X] Add argument to change **Filepath** prefix.
-- [X] Add argument to change **Destination** prefix.
 
 ## License
 
